@@ -1,6 +1,14 @@
 <section class="cart-show">
 
   <header class="page-header">
+      <% if enhanced_cart.count == 0 %>
+    <div class="alert alert-primary" role="alert">
+      Your cart is empty. Please click the link below to continue shopping.
+      </div>
+      <%= link_to 'Continue Shopping', products_path %>
+    </header>
+          <% end %>
+    <% if enhanced_cart.count > 0 %>
     <h1>My Cart</h1>
   </header>
 
@@ -14,7 +22,7 @@
           <th>Price</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody> 
         <% enhanced_cart.each do |item| %>
           <%= render 'item', product: item[:product], quantity: item[:quantity].to_i %>
         <% end %>
@@ -25,7 +33,7 @@
             TOTAL:
           </th>
           <th>
-            <%= cart_subtotal_cents / 100.0 %>
+            <%= humanized_money_with_symbol cart_subtotal_cents / 100.0 %>
           </th>
         </tr>
       </tfoot>
@@ -48,5 +56,5 @@
       <% end %>
     </div>
   </div>
-
+<% end %>
 </section>
