@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2021_06_26_062916) do
     t.bigint "product_id"
     t.integer "quantity"
     t.integer "item_price_cents"
-    t.integer "total_price_cents"
+    t.integer "total_price_cents" 
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["order_id"], name: "index_line_items_on_order_id"
