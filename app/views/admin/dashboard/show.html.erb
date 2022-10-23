@@ -1,16 +1,9 @@
-<h1>Admin::Dashboard#show</h1>
-<article>
+<h1>Admin Dashboard</h1>
+<div class="alert alert-info" role="alert">
+  Total number of products: &nbsp &nbsp <%= @product_count %>
+  <br>
+  Total number of categories: &nbsp <%= @category_count %>
+</div>
+<br>
 
-</article>
-
-<%# PostsController < ApplicationController
-   http_basic_authenticate_with name: ENV_Username, password: ENV_password, except: :index
-
-   def index
-     render plain: "Everyone can see me!"
-   end
-
-   def edit
-     render plain: "I'm only accessible if you know the password"
-   end
-end  %>
+<%= link_to "View Products", admin_products_path, class: 'btn btn-lg btn-primary' %>
