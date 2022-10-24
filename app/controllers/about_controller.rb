@@ -1,5 +1,4 @@
-class App::Controllers::AboutController < ApplicationController
-  def about
+class AboutController < ApplicationController
+  def index
   end
-
 end
