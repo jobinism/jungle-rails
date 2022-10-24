@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  namespace :app do
+    namespace :controllers do
+      get 'about/about'
+      get 'about/us'
+    end
+  end
   root to: 'products#index'
 
   resources :products, only: [:index, :show]
