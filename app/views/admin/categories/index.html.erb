@@ -1,4 +1,25 @@
 <section>
-<header class="text-center">Admin: Categories </header>
+<header class="text-center"><h1>Admin: &nbsp Categories </h1></header>
+<br>
+<br>
+ <div class="well">
+    <%= link_to '+ New Category', [:new, :admin, :category], class: 'btn btn-info' %>
+  </div>
+
+  <div class="panel panel-default categories">
+
+    <table class="table table-bordered">
+      <thead>
+        <tr class="d-flex">
+          <th class="col-1" scope="col">#</th>
+          <th class="col-11" scope="col">Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @categories %>
+      </tbody>
+    </table>
+
+  </div>
 
 </section>
