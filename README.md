@@ -1,17 +1,24 @@
-# Jungle
+# Jungles E-Commerce by Jarret Coyle
 
-A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
+Jungles is an E-Commerce app for buying tropical houseplants.
 
-## Setup
+1. run `git clone https://github.com/jobinism/jungle-rails`
+2. Run `bundle install` to install dependencies
+3. Create `config/database.yml` by copying `config/database.example.yml`
+4. Create `config/secrets.yml` by copying `config/secrets.example.yml`
+5. Run `bin/rails db:reset` to create, load and seed db
+6. Create .env file based on .env.example
+7. Sign up for a Stripe account
+8. Put Stripe (test) keys into appropriate .env vars
+9. Run `bin/rails s -b 0.0.0.0` to start the server
 
-1. Run `bundle install` to install dependencies
-2. Create `config/database.yml` by copying `config/database.example.yml`
-3. Create `config/secrets.yml` by copying `config/secrets.example.yml`
-4. Run `bin/rails db:reset` to create, load and seed db
-5. Create .env file based on .env.example
-6. Sign up for a Stripe account
-7. Put Stripe (test) keys into appropriate .env vars
-8. Run `bin/rails s -b 0.0.0.0` to start the server
+
+## Final Product Screenshots
+
+!["screenshot of Homepage"](https://github.com/jobinism/jungle-rails/blob/master/screenshots/homepage.png)
+!["screenshot of Products"](https://github.com/jobinism/jungle-rails/blob/master/screenshots/products.png)
+!["screenshot of Admin Dashboard"](https://github.com/jobinism/jungle-rails/blob/master/screenshots/admin_dashboard.png)
+
 
 ## Database
 
